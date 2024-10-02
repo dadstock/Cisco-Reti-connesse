@@ -1,7 +1,7 @@
 # Cisco-Reti-connesse
 Per inviare dei ping dal PC1 al PC5 dovremmo "aspettare" l'IP di BROADCAST che dovrà mandare pacchetti a tutte le reti associate per trovare il PC con l'indirizzo IP e
-MAC desiderato con cui grazie al protoccolo ARP (Address Resolution Protocol) riusciremo ad associare insieme. Infatti nel PDU (Protocol Data Unit) mancherà ancora 
-l'indirizzo del destinatario (0030.F262.9A2A >> FFFF.FFFF.FFFF ARP). 
+MAC desiderato con cui grazie al protocollo ARP (Address Resolution Protocol) riusciremo ad associarli insieme. Infatti nel PDU (Protocol Data Unit) al momento 
+dell'invio del pacchetto mancherà ancora l'indirizzo del destinatario (0030.F262.9A2A >> FFFF.FFFF.FFFF ARP). 
 Una volta trovato il destinatario partirà un pacchetto ICMP (Internet Control Message Protocol) contente l'indirizzo MAC di quet'ultimo verso il PC mittente.
 Da quel momento partiranno i ping direttamente verso il destinatario, inoltre l'indirizzo MAC sarà salvato nella tabella ARP del mittente per un lasso di tempo.
 
